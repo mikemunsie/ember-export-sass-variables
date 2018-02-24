@@ -1,20 +1,28 @@
 'use strict';
 const exportSass = require('./lib/exportSass');
+const findHost = require('./lib/findHost');
 
 module.exports = {
   name: 'ember-export-sass-variables',
 
   included(parent) {
     this._super.included.apply(this, arguments);
+    const host = findHost(parent);
+    if (!host) {
+      return;
+    }
 
     // https://github.com/aexmachina/ember-cli-sass/issues/171
     // You get this deprecation warning, but we shouldn't see this in an addon
-    if (!parent.options.sassOptions) {
-      parent.options.sassOptions = {};
+    if (!host.options.sassOptions) {
+      host.options.sassOptions = {};
     }
-    if (!parent.options.sassOptions.functions) {
-      parent.options.sassOptions.functions = {};
+
+    if (!host.options.sassOptions.functions) {
+      host.options.sassOptions.functions = {};
     }
-    Object.assign(parent.options.sassOptions.functions, exportSass(`${__dirname}/addon/utils`));
+
+    Object.assign(host.options.sassOptions.functions, exportSass(`${__dirname}/addon/utils`));
+    return parent;
   },
 };
