@@ -1,6 +1,6 @@
 {
   "name": "ember-export-sass-variables",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Export SASS Variables and import through ember utils",
   "keywords": [
     "ember-addon"
