@@ -7,9 +7,10 @@ module.exports = {
 
   included(parent) {
     this._super.included.apply(this, arguments);
-    const host = findHost(parent);
+    let host = findHost(parent);
+
     if (!host) {
-      return;
+      host = parent;
     }
 
     // https://github.com/aexmachina/ember-cli-sass/issues/171

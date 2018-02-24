@@ -1,0 +1,26 @@
+$themes: (
+  one: (
+    'one-a': '1-a'
+  ),
+  two: '2',
+  three: (
+    'three-a': '3-a'
+  )
+);
+
+$export: export('t1', ('1', '2', '3'));
+$export2: export('t2', (
+  one: '1',
+  two: '2',
+  three: '3'
+));
+$export3: export('t3', $themes);
+$export4: export('t4', (
+  a: (
+    b: (
+      c: (
+        d: $themes
+      )
+    )
+  )
+));

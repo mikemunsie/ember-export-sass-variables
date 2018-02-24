@@ -41,6 +41,7 @@
     "ember-source": "~2.18.0",
     "eslint-plugin-ember": "^5.0.0",
     "eslint-plugin-node": "^5.2.1",
+    "ember-cli-sass": "^7.1.7",
     "loader.js": "^4.2.3"
   },
   "engines": {
