@@ -15,7 +15,7 @@ The export method is used in your SASS file to tell the compiler what name the u
 Two parts: Define a sass export and import the utility that matches the name of the export.
 
 ```css
-$export: export('red', (
+$export: export('colors', (
   colors: $colors,
   themes: $themes
 ));
