@@ -7,15 +7,6 @@ module.exports = {
   included(parent) {
     this._super.included.apply(this, arguments);
 
-    // Get the top most parent
-    while (!this.app && parent) {
-      if (parent.app) {
-        this.app = parent.app;
-      } else {
-        parent = parent.parent;
-      }
-    }
-
     // https://github.com/aexmachina/ember-cli-sass/issues/171
     // You get this deprecation warning, but we shouldn't see this in an addon
     if (!parent.options.sassOptions) {
