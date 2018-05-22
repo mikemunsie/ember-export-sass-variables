@@ -1,7 +1,10 @@
 
 # ember-export-sass-variables
 
-[![Build Status](https://semaphoreci.com/api/v1/munstrocity/ember-export-sass-variables/branches/master/badge.svg)](https://semaphoreci.com/munstrocity/ember-export-sass-variables) <img src='http://emberobserver.com/badges/ember-export-sass-variables.svg' >
+<img src='http://emberobserver.com/badges/ember-export-sass-variables.svg' >
+
+### Note: This project is no longer maintained!
+If you find this project useful, please feel free to fork and make it your own. 
 
 Export your SASS variables and access them through a utility. This addon supports any lists / maps / nested maps and uses the built in node-sass functions to parse values.
 
