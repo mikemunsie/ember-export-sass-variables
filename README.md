@@ -4,7 +4,7 @@
 <img src='http://emberobserver.com/badges/ember-export-sass-variables.svg' >
 
 ### Note: This project is no longer maintained!
-If you find this project useful, please feel free to fork and make it your own. 
+I suggest checking out https://github.com/minusfive/ember-cli-sass-variables-export if you need a great alternative.
 
 Export your SASS variables and access them through a utility. This addon supports any lists / maps / nested maps and uses the built in node-sass functions to parse values.
 
